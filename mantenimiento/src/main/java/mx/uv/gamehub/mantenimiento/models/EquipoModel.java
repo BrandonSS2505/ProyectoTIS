@@ -4,13 +4,14 @@ import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 
-@Entity
-@Table(name="equipo")
+@Entity//nos ayuda a especificar que cada campo que añadamos sera una columna en nuestra base de datos
+@Table(name="equipo")//sirve para darle nombre a nuestra tabla y no tenga el nombre del modelo por defecto
 public class EquipoModel {
+    //se especifican todos los atrbutos que va a llevar nuestra base de datos asi como sus getters y setters
     @Id
-    @GeneratedValue (strategy= GenerationType.IDENTITY)
+    @GeneratedValue (strategy= GenerationType.IDENTITY)//esta linea hace que el identificador sea autoincremental
     private Long dispositivo;
-    @Column
+    @Column //especificamos que es una columna pese a no ser necesario
     private String nombre;
     @Column
     private String marca;
